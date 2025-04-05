@@ -4,5 +4,21 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
 body{
     font-family: "Poppins", Sans-serif;
+    letter-spacing: 1px;
     /* font-family: "Rubik", sans-serif; */
 }
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+  

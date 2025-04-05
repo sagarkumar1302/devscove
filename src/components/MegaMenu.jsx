@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const MegaMenu = ({ navigation }) => {
   return (
-    <div className="absolute z-10 top-16 py-5 px-8 left-0 mt-2 w-full bg-black shadow-sm flex justify-center transition-all items-center shadow-slate-50 bg-mega-menu-bg bg-contain bg-no-repeat bg-left-bottom bg-[auto_200px] animate-slideBg">
+    <div className="absolute z-10 top-16 py-5 px-8 left-0 mt-2 w-full bg-black shadow-sm flex justify-center transition-all items-center shadow-slate-50 bg-mega-menu-bg bg-no-repeat bg-left-bottom bg-[auto_150px] animate-slideBg">
       <div className="container grid grid-cols-4  sm:px-6 lg:px-10 gap-6 p-6">
         {navigation.sections &&
           navigation.sections.map((section, index) => (
@@ -29,7 +29,7 @@ const MegaMenu = ({ navigation }) => {
                         <span className="font-bold text-xl">
                           {subitem.name}
                         </span>
-                        <p className="text-base">{subitem.description}</p>
+                        {subitem.description &&<p className="text-base">{subitem.description}</p>}
                       </NavLink>
                     )}
                   </li>
